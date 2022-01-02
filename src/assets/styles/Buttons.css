@@ -1,0 +1,79 @@
+button {
+  background-color: var(--colorPrimary);
+  color: var(--colorOnPrimary);
+  min-height: 40px;
+  padding: 0px 24px;
+  border-radius: 100px;
+  margin: 8px;
+  text-align: center;
+  outline: none;
+  border: none;
+  transition: filter ease-in-out 0.1s;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 60%;
+  background-color: var(--colorSurface);
+  color: var(--colorOutline);
+}
+
+button:hover {
+  filter: var(--filterHover);
+}
+
+button:focus {
+  filter: var(--filterFocus);
+}
+
+button:active {
+  filter: var(--filterActive);
+}
+
+.fab {
+    height: 56px;
+    width: 56px;
+    border-radius: 16px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.clear {
+  background-color: transparent;
+  color: var(--colorOnBackground);
+}
+
+.clear:hover {
+  background-color: var(--colorHover);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.circle svg {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+
+.chip {
+  min-height: 35px !important;
+  padding: 0px 16px;
+  border-radius: 10px;
+  margin: 0px 5px;
+}
+
+
+
+.button-loadingContent span span{
+  width: 8px;
+  height: 8px;
+}

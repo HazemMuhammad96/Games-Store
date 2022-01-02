@@ -1,0 +1,50 @@
+nav {
+    background-color: var(--colorBackground);
+    height: var(--dimenNavHeight);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    transition: background-color 0.2s ease-in-out, 
+    box-shadow 0.2s ease-in-out;
+}
+
+.floating {
+    background-color: var(--colorSurface);
+    
+}
+
+.clipped {
+
+}
+
+.itemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+}
+
+.item a {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 100ms ease-in-out;
+}
+
+.inactive {
+    opacity: 0.5;
+}
+
+
+.active {
+    opacity: 1;
+}

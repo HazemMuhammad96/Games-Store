@@ -1,0 +1,16 @@
+
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin: 4px;
+    border-radius: var(--dimenCardBorderRadius);
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: var(--colorHover);
+}

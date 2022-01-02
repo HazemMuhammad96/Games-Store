@@ -1,0 +1,24 @@
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7fr minmax(240px, 2fr);
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 36px 18px;
+}
+
+.filters {
+    position: sticky;
+    top: calc(
+        var(--dimenNavHeight) + 16px
+    );
+    right: 0;
+    height: 80vh;
+    overflow-x: auto;
+}
+
+

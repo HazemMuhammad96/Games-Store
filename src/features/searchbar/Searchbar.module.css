@@ -1,0 +1,29 @@
+.wrapper {
+    padding: 8px 12px 8px 8px;
+    background-color: var(--colorSecondaryContainer);
+    border-radius: 50px;
+}
+
+.wrapper input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 100%;
+    padding: 0px 10px;
+    position: relative;
+    top: -1px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+.wrapper input:focus {
+    width: 200px;
+}
+
+.wrapper button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    cursor: pointer;
+}
