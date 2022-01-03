@@ -8,6 +8,7 @@ import FiltersAside from './features/filters/FiltersAside';
 import FiltersList from './features/filters/FiltersList';
 import RootPage from './features/root/RootPage';
 import { Route, Routes } from 'react-router-dom';
+import DiscoverPage from './features/discover/DiscoverPage';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       <RootPage>
         <Routes>
           <Route path="/browse" element={<GamesPage />} />
-          <Route path="/" element={<div>Replace Me</div>} />
+          <Route path="/" element={<DiscoverPage />} />
         </Routes>
       </RootPage>
       <div>

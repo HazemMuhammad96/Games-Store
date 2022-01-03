@@ -23,11 +23,15 @@ export const fetchAll = createAsyncThunk(
     }
 );
 
+
 export const gamesSlice = createSlice({
     name: 'games',
     initialState,
     reducers: {
-        
+        clear: (state) => { 
+            state.games = [];
+            state.loading = true;
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -41,7 +45,7 @@ export const gamesSlice = createSlice({
     },
 });
 
-// export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { clear } = gamesSlice.actions;
 
 export const selectGames = (state: RootState) => state.games;
 

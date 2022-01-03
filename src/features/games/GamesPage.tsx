@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import GameCard from '../common/gameCard/GameCard';
 import { useAppFetchSelector } from '../../data/store/hooks'
-import { fetchAll, GameState, selectGames } from './gamesSlice';
+import { clear, fetchAll, GameState, selectGames } from './gamesSlice';
 import styles from "./GamesPage.module.css";
 import FiltersAside from '../filters/FiltersAside';
 import LoadingSection from '../common/section/LoadingSection';
@@ -19,7 +19,8 @@ export default function GamesPage({ }: Props): ReactElement {
     const { games, loading } = useAppFetchSelector<GameState>(
         selectGames,
         fetchAll,
-        query
+        query,
+        clear,
     );
 
     return (
