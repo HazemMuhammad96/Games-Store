@@ -11,7 +11,11 @@ export default function RootPage({children}: Props): ReactElement {
     return (
         <div>
             <Navbar
-                routes={[{name: "Discover", path: "/"},{name: "Browse", path: "/browse"}]}
+                routes={[
+                    { name: "Discover", path: "/" },
+                    { name: "Browse", path: "/browse" },
+                    { name: "Cart", path: "/cart" },
+                ]}
             />
             <main>
                 {

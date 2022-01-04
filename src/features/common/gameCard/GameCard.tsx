@@ -5,11 +5,12 @@ interface Props {
     cover: string;
     title: string;
     price: number;
+    onClick?: () => void;
 }
 
-export default function GameCard({cover, title, price}: Props): ReactElement {
+export default function GameCard({cover, title, price, ...props}: Props): ReactElement {
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} {...props}>
             <div className={styles.cover}>
                 <img src={cover} alt="Game Cover"/>
             </div>

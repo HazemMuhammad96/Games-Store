@@ -1,14 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import GameCard from './features/common/gameCard/GameCard';
-import SearchBar from './features/searchbar/SearchBar';
 import GamesPage from './features/games/GamesPage';
-import FiltersAside from './features/filters/FiltersAside';
-import FiltersList from './features/filters/FiltersList';
 import RootPage from './features/root/RootPage';
 import { Route, Routes } from 'react-router-dom';
 import DiscoverPage from './features/discover/DiscoverPage';
+import GameDetails from './features/gameDetails/GameDetails';
+import Cart from './features/cart/Cart';
+import Login from './features/login/Login';
+import Register from './features/registration/Register';
 
 function App() {
 
@@ -21,8 +18,12 @@ function App() {
 
       <RootPage>
         <Routes>
-          <Route path="/browse" element={<GamesPage />} />
           <Route path="/" element={<DiscoverPage />} />
+          <Route path="/browse" element={<GamesPage />} />
+          <Route path="/browse/:id" element={<GameDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </RootPage>
       <div>

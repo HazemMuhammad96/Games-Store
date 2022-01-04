@@ -5,12 +5,12 @@ interface Props {
     loading: boolean;
     empty?: boolean;
     children: ReactElement;
-
+    msg?: string;
 }
 
-export default function LoadingSection({ loading, empty, children, ...props }: Props): ReactElement {
+export default function LoadingSection({ loading, empty, children, msg, ...props }: Props): ReactElement {
     return (
-        <div {...props}>
+        <>
             {loading ?
                 <div className={styles.loadingWrapper}>
                     <PropagateLoader />
@@ -18,11 +18,13 @@ export default function LoadingSection({ loading, empty, children, ...props }: P
                 :
                 empty ?
                     <div className={styles.loadingWrapper}>
-                        No Result Found!
+                        {
+                            msg ? msg : 'No Result Found!'
+                        }
                     </div>
                     :
                     children
             }
-        </div>
+        </>
     )
 }

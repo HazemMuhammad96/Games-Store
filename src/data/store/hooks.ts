@@ -10,16 +10,17 @@ export const useAppFetchSelector = <T>(
     selectorFunction,
     dispatchFunction,
     payload?,
+    refreshable = false,
     clearFunction?,
 ) => {
     const dispatch = useAppDispatch();
     const state: T = useAppSelector(root => selectorFunction(root));
 
-    React.useEffect(() => { 
+    React.useEffect(() => {
         dispatch(dispatchFunction(payload));
 
-        return () => { dispatch(clearFunction())};
-    },[payload])
+        return () => { if (clearFunction) dispatch(clearFunction()) };
+    }, refreshable ? [payload] : []);
 
     return state;
 };

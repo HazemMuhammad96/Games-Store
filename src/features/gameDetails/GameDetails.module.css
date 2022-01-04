@@ -1,0 +1,100 @@
+.container {
+    --dimenBorderRadius: 6px;
+    
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 16px 26px;
+
+}
+
+.gameHeader {
+    grid-column: 1/3;
+    padding: 24px 0px;
+}
+
+.content {
+    grid-column: 1/2;
+}
+
+.carouselContainer {
+    display: grid; 
+}
+
+.aside {
+    grid-column: 2/3;
+    background-color: var(--colorSurface);
+    height: 65vh;
+    border-radius: var(--dimenBorderRadius);
+    position: sticky;
+    top: calc(
+        var(--dimenNavHeight) + 16px
+    );
+    right: 0;
+}
+
+.price {
+    margin-top: 16px;
+    width: 100%;
+    text-align: end;
+    font-size: x-large
+}
+
+.description {
+    grid-column: 1/2;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    
+}
+
+.details > * {
+    border-radius: var(--dimenBorderRadius);
+}
+
+.details img {
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 5/3;
+}
+
+.details button {
+    width: 100%;
+    margin: 1px 0;
+    padding: 20px;
+    
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 16px;
+}
+
+.details ul  li {
+    text-transform: capitalize;
+
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.details ul li span:first-child {
+    font-weight: 600;
+}
+.details hr {
+    opacity: 0.2;
+}
+

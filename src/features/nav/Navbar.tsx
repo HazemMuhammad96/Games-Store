@@ -3,7 +3,8 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import NavItem from './NavItem'
 import styles from "./Navbar.module.css";
 import SearchBar from '../searchbar/SearchBar';
-import { useScrollPositionListener  } from '../../utils/hooks/uiHook';
+import { BoxArrowInRight as LoginIcon } from "react-bootstrap-icons"
+import { useScrollPositionListener } from '../../utils/hooks/uiHook';
 interface Props {
     routes: { path: string, name: string }[]
 }
@@ -29,6 +30,8 @@ export default function Navbar({ routes }: Props): ReactElement {
     return (
         <nav className={styles[navState]}>
             <div className='navContent'>
+
+
                 <ul className={styles.itemsList}>
                     {
                         routes.map((route, index) => (
@@ -36,12 +39,23 @@ export default function Navbar({ routes }: Props): ReactElement {
                         ))
                     }
                 </ul>
-                <SearchBar onSearch={(Search) => {
-                    if (Search)
-                        navigate(`/browse?search=${Search}`);
-                    else
-                        navigate(`/browse`);
-                }} />
+                <div className={styles.left}>
+                    
+                    <button className="clear"
+                        onClick={() => {
+                            navigate("login")
+                        }}
+                    >
+                            {<LoginIcon />}
+                        </button>
+                    
+                    <SearchBar onSearch={(Search) => {
+                        if (Search)
+                            navigate(`/browse?search=${Search}`);
+                        else
+                            navigate(`/browse`);
+                    }} />
+                </div>
             </div>
         </nav>
     )

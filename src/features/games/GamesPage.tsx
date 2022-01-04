@@ -8,6 +8,7 @@ import LoadingSection from '../common/section/LoadingSection';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { useQuery, useSelectedQuery } from '../../utils/hooks/routerHooks';
 import SearchBar from '../searchbar/SearchBar';
+import ClickableGameCard from '../common/gameCard/ClickableGameCard';
 interface Props {
 
 }
@@ -20,6 +21,7 @@ export default function GamesPage({ }: Props): ReactElement {
         selectGames,
         fetchAll,
         query,
+        true,
         clear,
     );
 
@@ -34,11 +36,9 @@ export default function GamesPage({ }: Props): ReactElement {
                 <div className={styles.list}>
                     {
                         games.map((it: any) => (
-                            <GameCard
+                            <ClickableGameCard
                                 key={it._id}
-                                title={it.name}
-                                cover={it.cover}
-                                price={it.price}
+                                game={it}
                             />
                         ))
                     }
